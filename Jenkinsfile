@@ -13,7 +13,7 @@ pipeline {
       agent any
       steps {
         script {
-          def trivyScan = sh(script: 'trivy -q -f json -o /tmp/trivy-docker-file-scan.json config DockerFile', returnStdout: true).trim()
+          def trivyScan = sh(script: 'trivy -q -f json -o /tmp/trivy-docker-file-scan.json config Dockerfile', returnStdout: true).trim()
           writeFile file: 'trivyScan.md', text: trivyScan
         }
       }

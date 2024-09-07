@@ -11,4 +11,7 @@ pipeline {
       steps {
         sh 'docker build -t my-php-site:latest .'
       }
+    }
   }
+}
+

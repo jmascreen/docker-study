@@ -1,6 +1,6 @@
 FROM php:8.0-apache AS base 
-
-RUN apt-get update && apt-get install -y curl 
+USER doja-01
+RUN apt-get update && apt-get install -y --no-install-recommends curl 
 
 WORKDIR /var/www/html
 

@@ -10,6 +10,7 @@ pipeline {
       }
     }
     stage('Security Scan') {
+      agent any
       steps {
         script {
           def trivyScan = sh(script: 'trivy -q -f json -o /var/lib/jenkins/reports/trivy-report.json your-image:tag', returnStdout: true).trim()

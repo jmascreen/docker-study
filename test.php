@@ -1,3 +1,3 @@
 <?php
-echo $_ENV['PHP_ENV'];
+echo "Environment - " $_ENV['PHP_ENV'];
 ?>
